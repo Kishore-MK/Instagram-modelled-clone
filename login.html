@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <script></script>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="imgs/mklogotp.png" alt="logo"></div>
+        <div class="header">
+            <h2>Log in</h2>
+        </div>
+        <form class="form" id="form"  method="post">
+            <div class="form-control">
+                <input type="text" placeholder="Username or email" id="username">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <input type="password" placeholder="Password" id="password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <button type="submit" href="main.html">Log in</button>
+        </form>
+        <h5><span>OR</span></h5>
+        <div class="signup">
+            <h4>Don't have an account? <a href="signup.html">Sign up</a></h4>
+            <h4><a href="">Forgot password?</a></h4>
+        </div>
+    </div>
+
+    <script>
+
+
+        const form = document.getElementById("form");
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
+
+        form.addEventListener("submit",e=>{
+            e.preventDefault();
+            validateForm();
+        });
+
+        function validateForm() {
+
+            const usernameValue = username.value.trim();
+            const passwordValue = password.value.trim();
+            
+            if(usernameValue === ''){
+                alert("enter pw to continue");
+                setError(username,'Username cannot be blank');
+            }
+            else{
+                setSuccess(username);
+            }
+
+            if(passwordValue === ''){
+                
+                setError(password,'Password cannot be blank');
+                return false;
+            }
+            else{
+                
+                setSuccess(password);
+                window.open("main.html")
+            }
+            
+            }      
+
+        function setErrror(input, message)
+        {
+            const formControl = input.parentElement;
+            const small = document.querySelector('small');
+            formControl.getElementsByTagName = 'form-control error';
+            small.innerHTML = message;
+        }
+    </script>
+    
+</body>
+</html>

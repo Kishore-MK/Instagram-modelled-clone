@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgba(239,239,239,1);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: rgba(239, 239, 239,1);
+    border-color: black;
+    padding: 20px ;
+    width: 450px;
+    height: 540px;
+    border-width: 1px;
+    border-style: outset;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.header{
+    padding: 20px 40px;
+}
+.header h2{
+    margin: 0;
+    text-align: center;
+}
+.form{
+    padding: 20px 40px;
+    
+}
+.form-control{
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control input{
+    border: 1px solid #b2b2b2;
+    border-radius: 2px;
+    display: flex;
+    font-size: 13px;
+    padding: 8px 8px;
+    width: 100%;
+}
+
+.form-control input:focus{
+    outline: none;
+    border-color: #676767;
+}
+
+.form-control.success .input{
+    border-color: #2ecc71;
+}
+
+.form-control.error .input{
+    border-color: #ff3300;
+}
+
+.form-control i{
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;   
+}
+
+.form-control.success i.fa-check-cirlce{
+    color:#2ecc71 ;
+    visibility: visible;
+}
+.form-control.error i.fa-exclamation-cirlce{
+    color:#ff3300 ;
+    visibility: visible;
+}
+
+.form-control small{
+    color: #ff3300;
+    visibility: hidden;
+    position: absolute;
+    left: 3px;
+    padding-top:2px;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.container img{
+    height: 140px;
+    display: block;
+    margin-left: auto ;
+    margin-right: auto;
+    
+}
+
+
+
+.container h5 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #b7b7b7; 
+   line-height: 0.1em;
+   margin: 10px 0px ; 
+   
+}
+.container span{
+    background:rgba(239, 239, 239,1); 
+    padding:0 10px; 
+    
+}
+
+.container h4{
+    text-align: center;
+}
+
+.container h4 :first-child{
+    padding-bottom: 0%;
+    margin-bottom: px;
+}
+.container h4 :last-child{
+    text-decoration: none;
+
+}
+
+
+.form button{
+    background-color: rgba(39, 215, 139, 0.79);
+    display: block;
+    border: none;
+    font-size: 15px;
+    border-radius: 2px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+}
+.form a:hover{
+    color: white;
+}
+
+.form button:hover{
+    background: rgba(125, 243, 192, 0.79);
+    border-radius: 2px;
+    display: block;
+}
